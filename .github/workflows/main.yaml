@@ -21,12 +21,10 @@ jobs:
 
       - name: Gradle Build
         run: |
-          cd src/main
           ./gradlew clean build
         working-directory: ${{ github.workspace }}
 
       - name: Run Tests
         run: |
-          cd src/test
           ./gradlew test
         working-directory: ${{ github.workspace }}
