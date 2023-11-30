@@ -16,5 +16,5 @@ jobs:
       - name: Gradle Build
         uses: eskatos/gradle-build-action@v2
         with:
-          gradle-version: '7.2'
+          gradle-version: '8.4'
           tasks: 'clean build'
