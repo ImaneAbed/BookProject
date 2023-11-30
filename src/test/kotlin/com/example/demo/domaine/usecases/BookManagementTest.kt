@@ -111,7 +111,7 @@ class BookManagementTest {
 
     @Provide
     fun correctString(): Arbitrary<String> {
-        return Arbitraries.strings().ofMinLength(2) // on suppose qu'il n'y a pas de titre avec qu'une seule lettre
+        return Arbitraries.strings().ofMinLength(1) // on suppose qu'il n'y a pas de titre avec qu'une seule lettre
     }
 
 }

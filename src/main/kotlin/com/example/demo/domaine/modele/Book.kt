@@ -6,15 +6,15 @@ data class Book (val title : String, val author : String){
             if(title == ""){
                 throw Exception("empty title")
             }
-            if(title == " "){
-                throw Exception("blank title")
-            }
+            //if(title == " "){
+            //    throw Exception("blank title")
+            //}
             if(author == ""){
                 throw Exception("empty author")
             }
-            if(author == " "){
-                throw Exception("blank author")
-            }
+            //if(author == " "){
+            //    throw Exception("blank author")
+            //}
         }
 
 

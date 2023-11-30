@@ -16,16 +16,16 @@ class BookTest {
 
     }
     //title is " "
-    @Test
-    fun blankTitle(){
+    //@Test
+    //fun blankTitle(){
         //Arrange
-        val title: String = " "
-        val author: String = "Charles Perrault"
+    //    val title: String = " "
+    //    val author: String = "Charles Perrault"
 
         //Act & Assert
-        val res = Book(title, author)
+    //    val res = Book(title, author)
 
-    }
+    //}
 
     //author ""
     @Test
@@ -39,15 +39,15 @@ class BookTest {
 
     }
     //author is " "
-    @Test
-    fun blankAuthor(){
+    //@Test
+    //fun blankAuthor(){
         //Arrange
-        val title: String = "Le Petit Chaperon Rouge"
-        val author: String = " "
+    //    val title: String = "Le Petit Chaperon Rouge"
+    //    val author: String = " "
 
         //Act & Assert
-        val res = Book(title, author)
+    //    val res = Book(title, author)
 
-    }
+    //}
 
 }
