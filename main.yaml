@@ -1,0 +1,20 @@
+name: CI/CD with Gradle
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Gradle Build
+        uses: eskatos/gradle-build-action@v2
+        with:
+          gradle-version: '7.2'
+          tasks: 'clean build'
