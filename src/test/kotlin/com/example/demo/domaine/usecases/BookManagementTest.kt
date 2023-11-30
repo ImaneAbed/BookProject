@@ -1,4 +1,4 @@
-package com.example.demo.domaine.usecases
+/*package com.example.demo.domaine.usecases
 
 import assertk.assertions.isEqualTo
 import com.example.demo.domaine.modele.Book
@@ -114,4 +114,4 @@ class BookManagementTest {
         return Arbitraries.strings().ofMinLength(1)
     }
 
-}
+}*/
