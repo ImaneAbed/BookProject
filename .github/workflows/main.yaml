@@ -24,6 +24,7 @@ jobs:
           ./gradlew clean build --info
         working-directory: ${{ github.workspace }}
 
+
       - name: Run Tests
         run: |
           ./gradlew test
