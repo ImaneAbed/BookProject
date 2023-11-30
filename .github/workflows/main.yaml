@@ -20,9 +20,7 @@ jobs:
           java-version: '20'
 
       - name: Gradle Build
-        run: |
-          ./gradlew clean build --info
+        run: ./gradlew clean build --info
 
       - name: Run Tests
-        run: |
-          ./gradlew test
+        run: ./gradlew test
