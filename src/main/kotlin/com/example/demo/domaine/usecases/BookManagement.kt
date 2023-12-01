@@ -1,21 +1,21 @@
 package com.example.demo.domaine.usecases
 
 import com.example.demo.domaine.modele.Book
-import com.example.demo.domaine.modele.Library
+import com.example.demo.domaine.port.BookInterface
 
-data class BookManagement (val library: Library){
+data class BookManagement (val bookInterface: BookInterface){
 
     fun createBook(title: String, author: String): Book {
         val newBook = Book(title, author)
-        library.saveBook(newBook)
+        bookInterface.saveBook(newBook)
         return newBook
     }
     fun createBook(book : Book): Book {
-        library.saveBook(book)
+        bookInterface.saveBook(book)
         return book
     }
 
     fun listBooks(): List<Book> {
-        return library.getAllBooks().sortedBy { it.title }
+        return bookInterface.getAllBooks().sortedBy { it.title.lowercase() }
     }
 }

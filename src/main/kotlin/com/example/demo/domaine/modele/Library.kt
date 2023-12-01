@@ -1,5 +1,6 @@
-package com.example.demo.domaine.modele
+/*package com.example.demo.domaine.modele
 
+// A SUPPRIMER CAR DOUBLON AVEC LE PORT
 class Library {
 
     val books = mutableListOf<Book>()
@@ -11,4 +12,4 @@ class Library {
     fun getAllBooks(): List<Book> {
         return books.toList()
     }
-}
+}*/
