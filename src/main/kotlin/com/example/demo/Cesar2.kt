@@ -25,10 +25,10 @@ class Cesar2 {
     }
 
     fun cypher2(inputChar: Char, shift: Int): Char {
-        require(shift >= 0) { "Invalid shift value: $shift" }
+        require(shift >= 0) {"invalid number !"}
 
         if (inputChar !in 'A'..'Z') {
-            throw IllegalArgumentException("Invalid input letter: $inputChar")
+            throw IllegalArgumentException("invalid letter !")
         }
 
         if (shift == 0) {
@@ -46,10 +46,10 @@ class Cesar2 {
     }
 
     fun decypher(inputChar: Char, shift: Int): Char {
-        require(shift >= 0) { "Invalid shift value: $shift" }
+        require(shift >= 0) {"invalid number !"}
 
         if (inputChar !in 'A'..'Z') {
-            throw IllegalArgumentException("Invalid input letter: $inputChar")
+            throw IllegalArgumentException("invalid letter !")
         }
 
         if (shift == 0) {

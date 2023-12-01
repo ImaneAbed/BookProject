@@ -1,7 +1,10 @@
-/*package com.example.demo
+package com.example.demo
 
+import assertk.assertFailure
+import assertk.assertions.hasMessage
 import assertk.assertions.isBetween
 import assertk.assertions.isEqualTo
+import assertk.assertions.isInstanceOf
 import net.jqwik.api.*
 import org.junit.jupiter.api.Test
 
@@ -85,10 +88,12 @@ class CesarTest2 {
         val cesar = Cesar2()
 
         //Act
-        val res = cesar.cypher2(a, num)
+        //val res = cesar.cypher2(a, num)
 
         //Assert
-        assertk.assertThat(res).isEqualTo('!')
+        assertFailure { cesar.cypher2(a, num) }
+            .isInstanceOf(Exception::class)
+            .hasMessage("invalid number !")
     }
 
     @Property //cypher(a, 0) = a
@@ -166,4 +171,3 @@ class CesarTest2 {
 
 }
 
- */

@@ -1,5 +1,8 @@
-/*package com.example.demo.domaine.modele
+package com.example.demo.domaine.modele
 
+import assertk.assertFailure
+import assertk.assertions.hasMessage
+import assertk.assertions.isInstanceOf
 import org.junit.jupiter.api.Test
 
 class BookTest {
@@ -12,7 +15,9 @@ class BookTest {
         val author: String = "Charles Perrault"
 
         //Act & Assert
-        val res = Book(title, author)
+        assertFailure { Book(title, author) }
+            .isInstanceOf(Exception::class)
+            .hasMessage("empty title")
 
     }
     //title is " "
@@ -35,7 +40,9 @@ class BookTest {
         val author: String = ""
 
         //Act & Assert
-        val res = Book(title, author)
+        assertFailure { Book(title, author) }
+            .isInstanceOf(Exception::class)
+            .hasMessage("empty author")
 
     }
     //author is " "
@@ -51,4 +58,3 @@ class BookTest {
     //}
 
 }
-*/
