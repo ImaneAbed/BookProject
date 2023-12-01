@@ -48,7 +48,7 @@ jobs:
           files: |
             build/test-results/test/*.xml
       - name: Run Coverage
-        run: ./gradlew jacocoFullReport
+        run: ./gradlew jacocoFullReport --stacktrace
       - name: JaCoCo Code Coverage Report
         id: jacoco_reporter
         uses: PavanMudigonda/jacoco-reporter@v4.8
