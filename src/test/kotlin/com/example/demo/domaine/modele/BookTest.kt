@@ -18,19 +18,7 @@ class BookTest {
         assertFailure { Book(title, author) }
             .isInstanceOf(Exception::class)
             .hasMessage("empty title")
-
     }
-    //title is " "
-    //@Test
-    //fun blankTitle(){
-        //Arrange
-    //    val title: String = " "
-    //    val author: String = "Charles Perrault"
-
-        //Act & Assert
-    //    val res = Book(title, author)
-
-    //}
 
     //author ""
     @Test
@@ -43,18 +31,5 @@ class BookTest {
         assertFailure { Book(title, author) }
             .isInstanceOf(Exception::class)
             .hasMessage("empty author")
-
     }
-    //author is " "
-    //@Test
-    //fun blankAuthor(){
-        //Arrange
-    //    val title: String = "Le Petit Chaperon Rouge"
-    //    val author: String = " "
-
-        //Act & Assert
-    //    val res = Book(title, author)
-
-    //}
-
 }

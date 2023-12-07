@@ -10,7 +10,7 @@ plugins {
 	id("info.solidsoft.pitest") version "1.15.0"
 }
 
-group = "com.jicay"
+group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -83,7 +83,7 @@ tasks.register<JacocoReport>("jacocoFullReport") {
 }
 
 pitest {
-	targetClasses.add("com.jicay.bookmanagement.*")
+	targetClasses.add("com.example.demo.*")
 	junit5PluginVersion = "1.0.0"
 	avoidCallsTo.set(setOf("kotlin.jvm.internal"))
 	mutators.set(setOf("STRONGER"))
